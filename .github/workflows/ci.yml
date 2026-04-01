@@ -25,8 +25,9 @@ jobs:
         working-directory: backend
 
       - name: Run ESLint
-        run: npx eslint server.js --no-eslintrc --rule "{\"no-unused-vars\": \"warn\"}"
         working-directory: backend
+        run: |
+          npx eslint server.js --no-eslintrc --rule "{\"no-unused-vars\": \"warn\"}"
 
       - name: Run tests
         run: npm test
